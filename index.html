@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosmic Links | Connect with the Universe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        orbitron: ['Orbitron', 'sans-serif'],
+                        space: ['"Space Grotesk"', 'sans-serif'],
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 3s infinite',
+                        'float': 'float 6s ease-in-out infinite',
+                        'twinkle': 'twinkle var(--duration) ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0px)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        },
+                        twinkle: {
+                            '0%, 100%': { opacity: '0.2' },
+                            '50%': { opacity: '1' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .glass-card {
+            background: rgba(10, 20, 50, 0.25);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(100, 180, 255, 0.2);
+        }
+        .glass-card:hover {
+            background: rgba(20, 40, 80, 0.35);
+            border: 1px solid rgba(100, 200, 255, 0.4);
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-[#0a0a1a] text-[#e0e0ff] font-space relative overflow-x-hidden" 
+      style="background-image: radial-gradient(circle at 10% 20%, rgba(20, 100, 220, 0.15) 0%, transparent 20%), 
+             radial-gradient(circle at 90% 30%, rgba(10, 180, 250, 0.1) 0%, transparent 25%), 
+             radial-gradient(circle at 50% 80%, rgba(30, 120, 200, 0.1) 0%, transparent 30%);">
+    
+    <!-- Animated Stars Background -->
+    <div class="fixed inset-0 pointer-events-none -z-10" id="stars"></div>
+    
+    <div class="container mx-auto px-4 py-12 max-w-2xl animate-float">
+        <!-- Header -->
+        <header class="flex flex-col items-center mb-12">
+            <div class="relative mb-6">
+                <div class="w-24 h-24 rounded-full glass-card flex items-center justify-center shadow-lg shadow-blue-500/20">
+                    <div class=" w-20 h-20 rounded-full bg-gradient-to-br from-blue-500 to-blue-300 flex items-center justify-center shadow-inner">
+                        <img class="rounded-full" src="LOGO-PROFILES-V 2.0-01.jpg " alt="">
+                    </div>
+                </div>
+                <!-- <div class="absolute -bottom-2 -right-2 bg-blue-500 rounded-full w-6 h-6 flex items-center justify-center shadow-md">
+                    <i class="fas fa-plus text-white text-xs"></i>
+                </div> -->
+            </div>
+            <h1 class="text-3xl md:text-4xl font-bold mb-2 font-orbitron bg-gradient-to-r from-blue-400 to-blue-200 bg-clip-text text-transparent">
+                Ibrahim Hemin
+            </h1>
+            <p class="text-blue-300/80 text-center max-w-md">
+                Explore my digital universe. Connect with me across the galaxy.
+            </p>
+        </header>
+        
+        <!-- Main Links -->
+        <main class="space-y-4 mb-12">
+            <a href="https://x.com/hemin_ibra2601" class="block glass-card rounded-xl p-4 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10 hover:-translate-y-0.5 group">
+                <div class="flex items-center">
+                    <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-blue-300 flex items-center justify-center mr-4 shadow-sm">
+                        <i class="fab fa-twitter text-white"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="font-medium text-white">Twitter</h3>
+                        <p class="text-sm text-blue-200/80">Follow my cosmic thoughts</p>
+                    </div>
+                    <i class="fas fa-chevron-right text-blue-300/70 group-hover:text-blue-300"></i>
+                </div>
+            </a>
+            
+            <a href="https://github.com/IbrahimHeminJ" class="block glass-card rounded-xl p-4 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10 hover:-translate-y-0.5 group">
+                <div class="flex items-center">
+                    <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-blue-300 flex items-center justify-center mr-4 shadow-sm">
+                        <i class="fab fa-github text-white"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="font-medium text-white">GitHub</h3>
+                        <p class="text-sm text-blue-200/80">Explore my code galaxy</p>
+                    </div>
+                    <i class="fas fa-chevron-right text-blue-300/70 group-hover:text-blue-300"></i>
+                </div>
+            </a>
+            
+            <a href="https://www.linkedin.com/in/ibrahim-hemin-244689275/" class="block glass-card rounded-xl p-4 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10 hover:-translate-y-0.5 group">
+                <div class="flex items-center">
+                    <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-blue-300 flex items-center justify-center mr-4 shadow-sm">
+                        <i class="fab fa-linkedin-in text-white"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="font-medium text-white">LinkedIn</h3>
+                        <p class="text-sm text-blue-200/80">Professional space station</p>
+                    </div>
+                    <i class="fas fa-chevron-right text-blue-300/70 group-hover:text-blue-300"></i>
+                </div>
+            </a>
+            
+            <a href="mailto:ibrahim.hawlere18@gmail.com" class="block glass-card rounded-xl p-4 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10 hover:-translate-y-0.5 group">
+                <div class="flex items-center">
+                    <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-blue-300 flex items-center justify-center mr-4 shadow-sm">
+                        <i class="fas fa-envelope text-white"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="font-medium text-white">Email</h3>
+                        <p class="text-sm text-blue-200/80">Send an interstellar message</p>
+                    </div>
+                    <i class="fas fa-chevron-right text-blue-300/70 group-hover:text-blue-300"></i>
+                </div>
+            </a>
+            <a href="https://www.instagram.com/ibrahim_hemin/" class="block glass-card rounded-xl p-4 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10 hover:-translate-y-0.5 group">
+                <div class="flex items-center">
+                    <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-blue-300 flex items-center justify-center mr-4 shadow-sm">
+                        <i class="fab fa-instagram text-white"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="font-medium text-white">Instagram</h3>
+                        <p class="text-sm text-blue-200/80">Explore My Galaxy</p>
+                    </div>
+                    <i class="fas fa-chevron-right text-blue-300/70 group-hover:text-blue-300"></i>
+                </div>
+            </a>
+            <a href="https://discordapp.com/users/621568725622980609" class="block glass-card rounded-xl p-4 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10 hover:-translate-y-0.5 group">
+                <div class="flex items-center">
+                    <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-blue-300 flex items-center justify-center mr-4 shadow-sm">
+                        <i class="fab fa-discord text-white"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="font-medium text-white">Discord</h3>
+                        <p class="text-sm text-blue-200/80">Read My name upside down</p>
+                    </div>
+                    <i class="fas fa-chevron-right text-blue-300/70 group-hover:text-blue-300"></i>
+                </div>
+            </a>
+            
+            <!-- <a href="#" class="block glass-card rounded-xl p-4 transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/10 hover:-translate-y-0.5 group">
+                <div class="flex items-center">
+                    <div class="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-blue-300 flex items-center justify-center mr-4 shadow-sm">
+                        <i class="fas fa-newspaper text-white"></i>
+                    </div>
+                    <div class="flex-1">
+                        <h3 class="font-medium text-white">Blog</h3>
+                        <p class="text-sm text-blue-200/80">Read my space journals</p>
+                    </div>
+                    <i class="fas fa-chevron-right text-blue-300/70 group-hover:text-blue-300"></i>
+                </div>
+            </a> -->
+        </main>
+        
+        <!-- Social Icons -->
+        <div class="flex justify-center space-x-6 mb-12">
+            <a href="https://www.instagram.com/ibrahim_hemin/" class="w-10 h-10 rounded-full glass-card flex items-center justify-center hover:bg-blue-500/20 transition-colors duration-300">
+                <i class="fab fa-instagram text-blue-300"></i>
+            </a>
+            <a href="https://discordapp.com/users/621568725622980609" class="w-10 h-10 rounded-full glass-card flex items-center justify-center hover:bg-blue-500/20 transition-colors duration-300">
+                <i class="fab fa-discord text-blue-300"></i>
+            </a>
+            
+        </div>
+        
+        <!-- Footer -->
+        <footer class="text-center text-blue-300/50 text-sm">
+            <p>© 2025 Cosmic Links. All rights reserved, HASARASOFT</p>
+            <p class="mt-1">Made with <i class="fas fa-heart text-blue-400/70"></i> in the Milky Way</p>
+        </footer>
+    </div>
+
+    <script>
+        // Create twinkling stars
+        document.addEventListener('DOMContentLoaded', function() {
+            const starsContainer = document.getElementById('stars');
+            const starCount = 100;
+            
+            for (let i = 0; i < starCount; i++) {
+                const star = document.createElement('div');
+                star.className = 'absolute rounded-full bg-white animate-twinkle';
+                
+                // Random position
+                const x = Math.random() * 100;
+                const y = Math.random() * 100;
+                
+                // Random size (0.5px to 2px)
+                const size = Math.random() * 1.5 + 0.5;
+                
+                // Random animation duration (2s to 5s)
+                const duration = Math.random() * 3 + 2;
+                
+                star.style.left = `${x}%`;
+                star.style.top = `${y}%`;
+                star.style.width = `${size}px`;
+                star.style.height = `${size}px`;
+                star.style.setProperty('--duration', `${duration}s`);
+                
+                // Random delay for animation
+                star.style.animationDelay = `${Math.random() * 5}s`;
+                
+                starsContainer.appendChild(star);
+            }
+        });
+    </script>
+</body>
+</html>
