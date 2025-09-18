@@ -1,6 +1,6 @@
 {
   "name": "ibrahim",
-  "description": "ibrahim hemin's portfolio, the CEO and founder of Hasarasoft",
+  "description": "My personnal Profile page",
   "version": "0.0.1",
   "license": "MIT",
   "type": "module",
@@ -8,7 +8,7 @@
     "docs:build": "vuepress build docs",
     "docs:clean-dev": "vuepress dev docs --clean-cache",
     "docs:dev": "vuepress dev docs",
-    "docs:update-package": "npx vp-update"
+    "docs:update-package": "pnpm dlx vp-update"
   },
   "devDependencies": {
     "@vuepress/bundler-vite": "2.0.0-rc.20",
