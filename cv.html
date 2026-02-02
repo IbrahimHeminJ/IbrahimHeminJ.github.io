@@ -3,11 +3,299 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ibrahim CV</title>
+    <title>Ibrahim Hemin - CV</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom styles for space theme */
+        @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Space+Grotesk:wght@300;400;500;600&display=swap');
+        
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+            overflow-x: hidden;
+        }
+        
+        .space-bg {
+            background: linear-gradient(180deg, #0a0a2a 0%, #0c1b33 30%, #0a1128 70%, #050816 100%);
+            position: relative;
+            min-height: 100vh;
+        }
+        
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+        
+        .star {
+            position: absolute;
+            background-color: white;
+            border-radius: 50%;
+            animation: twinkle 3s infinite;
+        }
+        
+        @keyframes twinkle {
+            0%, 100% { opacity: 0.3; }
+            50% { opacity: 1; }
+        }
+        
+        .title-font {
+            font-family: 'Orbitron', monospace;
+        }
+        
+        .glow {
+            text-shadow: 0 0 10px rgba(64, 156, 255, 0.7);
+        }
+        
+        .neon-border {
+            border: 1px solid rgba(64, 156, 255, 0.5);
+            box-shadow: 0 0 15px rgba(64, 156, 255, 0.3);
+        }
+        
+        .planet {
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle at 30% 30%, #1a3a5f, #0a1a33);
+            z-index: 1;
+        }
+        
+        .iframe-container {
+            position: relative;
+            z-index: 2;
+            background-color: rgba(10, 25, 47, 0.8);
+        }
+    </style>
 </head>
+<body class="text-white">
+    <!-- Space background with stars -->
+    <div class="stars" id="stars"></div>
+    
+    <!-- Main container -->
+    <div class="space-bg min-h-screen relative">
+        <!-- Decorative planets -->
+        <div class="planet w-24 h-24 -left-12 top-1/4 opacity-70 hidden md:block"></div>
+        <div class="planet w-40 h-40 -right-20 bottom-1/4 opacity-50 hidden lg:block"></div>
+        <div class="planet w-16 h-16 right-1/4 top-16 opacity-60 hidden md:block"></div>
+        
+        <!-- Header section -->
+        <header class="relative z-10 pt-8 px-4 md:px-8">
+            <div class="container mx-auto">
+                <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+                    <div class="text-center md:text-left mb-6 md:mb-0">
+                        <h1 class="title-font text-3xl md:text-4xl font-bold glow">Ibrahim Hemin</h1>
+                        <p class="text-blue-300 mt-2">Software and Informatics Engineer</p>
+                        <div class="flex justify-center md:justify-start space-x-4 mt-4">
+                            <div class="flex items-center space-x-2">
+                                <i class="fas fa-map-marker-alt text-blue-400"></i>
+                                <span class="text-sm">Erbil, Iraq</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <i class="fas fa-envelope text-blue-400"></i>
+                                <span class="text-sm">ibrahim.hawlere18@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Download CV button -->
+                    <a href="cv.pdf" download="Ibrahim_Hemin_CV.pdf" 
+                       class="group relative inline-flex items-center px-6 py-3 md:px-8 md:py-4 bg-gradient-to-r from-blue-700 to-indigo-800 hover:from-blue-600 hover:to-indigo-700 rounded-lg font-semibold text-white transition-all duration-300 transform hover:-translate-y-1 hover:shadow-xl hover:shadow-blue-900/30">
+                        <i class="fas fa-download mr-3"></i>
+                        <span>Download CV</span>
+                        <div class="absolute -inset-1 rounded-lg bg-blue-500/20 blur opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                    </a>
+                </div>
+                
+                <!-- Stats cards -->
+                <!-- <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                    <div class="bg-blue-900/30 backdrop-blur-sm rounded-lg p-4 text-center neon-border">
+                        <div class="text-2xl font-bold text-blue-300">5+</div>
+                        <div class="text-sm text-blue-200">Years Experience</div>
+                    </div>
+                    <div class="bg-blue-900/30 backdrop-blur-sm rounded-lg p-4 text-center neon-border">
+                        <div class="text-2xl font-bold text-blue-300">50+</div>
+                        <div class="text-sm text-blue-200">Projects Completed</div>
+                    </div>
+                    <div class="bg-blue-900/30 backdrop-blur-sm rounded-lg p-4 text-center neon-border">
+                        <div class="text-2xl font-bold text-blue-300">10+</div>
+                        <div class="text-sm text-blue-200">Happy Clients</div>
+                    </div>
+                    <div class="bg-blue-900/30 backdrop-blur-sm rounded-lg p-4 text-center neon-border">
+                        <div class="text-2xl font-bold text-blue-300">8</div>
+                        <div class="text-sm text-blue-200">Technologies</div>
+                    </div>
+                </div>
+            </div> -->
+        </header>
+        
+        <!-- Main content with PDF viewer -->
+        <main class="relative z-10 px-4 md:px-8 pb-8">
+            <div class="container mx-auto">
+                <!-- PDF viewer section -->
+                <div class="rounded-xl overflow-hidden shadow-2xl neon-border iframe-container">
+                    <div class="bg-blue-900/70 px-4 py-3 flex justify-between items-center">
+                        <div class="flex items-center space-x-2">
+                            <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                            <span class="ml-2 text-sm font-medium">Ibrahim_Hemin_CV.pdf</span>
+                        </div>
+                        <div class="flex space-x-2">
+                            <button id="zoomIn" class="p-1 hover:bg-blue-800/50 rounded">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                            <button id="zoomOut" class="p-1 hover:bg-blue-800/50 rounded">
+                                <i class="fas fa-search-minus"></i>
+                            </button>
+                            <button id="fullscreen" class="p-1 hover:bg-blue-800/50 rounded">
+                                <i class="fas fa-expand"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <!-- PDF iframe -->
+                    <iframe src="cv.pdf" title="Ibrahim Hemin CV" 
+                            class="w-full h-[500px] md:h-[600px] lg:h-[700px]"
+                            id="cvIframe">
+                    </iframe>
+                </div>
+                
+                <!-- Info section -->
+                <!-- <div class="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="bg-blue-900/30 backdrop-blur-sm rounded-xl p-5 neon-border">
+                        <h3 class="title-font text-xl font-bold mb-3 flex items-center">
+                            <i class="fas fa-rocket mr-2 text-blue-400"></i>
+                            Skills & Technologies
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-blue-800/50 rounded-full text-sm">JavaScript</span>
+                            <span class="px-3 py-1 bg-blue-800/50 rounded-full text-sm">React</span>
+                            <span class="px-3 py-1 bg-blue-800/50 rounded-full text-sm">Node.js</span>
+                            <span class="px-3 py-1 bg-blue-800/50 rounded-full text-sm">Python</span>
+                            <span class="px-3 py-1 bg-blue-800/50 rounded-full text-sm">Tailwind CSS</span>
+                            <span class="px-3 py-1 bg-blue-800/50 rounded-full text-sm">MongoDB</span>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-blue-900/30 backdrop-blur-sm rounded-xl p-5 neon-border">
+                        <h3 class="title-font text-xl font-bold mb-3 flex items-center">
+                            <i class="fas fa-briefcase mr-2 text-blue-400"></i>
+                            Experience
+                        </h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-caret-right text-blue-400 mt-1 mr-2"></i>
+                                <span>Senior Developer at TechSolutions Inc. (2021-Present)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-caret-right text-blue-400 mt-1 mr-2"></i>
+                                <span>Full Stack Developer at WebCrafters (2019-2021)</span>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <div class="bg-blue-900/30 backdrop-blur-sm rounded-xl p-5 neon-border">
+                        <h3 class="title-font text-xl font-bold mb-3 flex items-center">
+                            <i class="fas fa-graduation-cap mr-2 text-blue-400"></i>
+                            Education
+                        </h3>
+                        <ul class="space-y-2">
+                            <li class="flex items-start">
+                                <i class="fas fa-caret-right text-blue-400 mt-1 mr-2"></i>
+                                <span>MSc in Computer Science, University of Technology (2017-2019)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-caret-right text-blue-400 mt=1 mr-2"></i>
+                                <span>BSc in Software Engineering, Erbil University (2013-2017)</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div> -->
+        </main>
+        
+        <!-- Footer -->
+        <footer class="relative z-10 mt-12 py-6 text-center border-t border-blue-900/50">
+            <div class="container mx-auto px-4">
+                <p class="text-blue-300">© 2026 Ibrahim Hemin. All rights reserved.</p>
+                <div class="flex justify-center space-x-4 mt-4">
+                    <a href="#" class="text-blue-300 hover:text-white transition-colors">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="#" class="text-blue-300 hover:text-white transition-colors">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="#" class="text-blue-300 hover:text-white transition-colors">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
 
-<body>
-    <iframe src="cv.pdf"  title="Ibrahim Hemin CV" width="100%" height="100%">
+    <script>
+        // Create stars for the background
+        function createStars() {
+            const starsContainer = document.getElementById('stars');
+            const starCount = 150;
+            
+            for (let i = 0; i < starCount; i++) {
+                const star = document.createElement('div');
+                star.classList.add('star');
+                
+                // Random position
+                const x = Math.random() * 100;
+                const y = Math.random() * 100;
+                
+                // Random size (1-3px)
+                const size = Math.random() * 2 + 1;
+                
+                // Random animation delay
+                const delay = Math.random() * 5;
+                
+                star.style.left = `${x}%`;
+                star.style.top = `${y}%`;
+                star.style.width = `${size}px`;
+                star.style.height = `${size}px`;
+                star.style.animationDelay = `${delay}s`;
+                
+                starsContainer.appendChild(star);
+            }
+        }
+        
+        // PDF viewer controls
+        document.getElementById('zoomIn').addEventListener('click', function() {
+            const iframe = document.getElementById('cvIframe');
+            const currentHeight = parseInt(iframe.style.height) || 700;
+            iframe.style.height = (currentHeight + 50) + 'px';
+        });
+        
+        document.getElementById('zoomOut').addEventListener('click', function() {
+            const iframe = document.getElementById('cvIframe');
+            const currentHeight = parseInt(iframe.style.height) || 700;
+            if (currentHeight > 300) {
+                iframe.style.height = (currentHeight - 50) + 'px';
+            }
+        });
+        
+        document.getElementById('fullscreen').addEventListener('click', function() {
+            const iframe = document.getElementById('cvIframe');
+            if (iframe.requestFullscreen) {
+                iframe.requestFullscreen();
+            } else if (iframe.webkitRequestFullscreen) {
+                iframe.webkitRequestFullscreen();
+            } else if (iframe.msRequestFullscreen) {
+                iframe.msRequestFullscreen();
+            }
+        });
+        
+        // Initialize stars when page loads
+        window.addEventListener('DOMContentLoaded', createStars);
+    </script>
 </body>
-
 </html>
